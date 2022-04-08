@@ -1,0 +1,254 @@
+EEG Articles with Summaries 
+
+[1] “Using Machine Learning to Categorize EEG signals from the brain to words”
+Tom Di Fulvio  March 10, 2019
+DiFulvio2019
+
+The goal of this article was to create an Android app that would output the words a person was thinking in order to help someone communicate. The NeuroSky MindWave Mobile headset was used to collect raw EEG signals from the words “yes”, “no”, “food”, “water”, “happy” and “sad”. The classification algorithms used were the Multiclass Decision Forest and Multiclass Neural Network. The results from the Multiclass Decision Forest were better than the Multiclass Neural Network which achieved 72% overall accuracy and 90.7% average accuracy. The Multiclass Neural Network was dropped and only used the Multiclass Decision Forest. The results had 95% accuracy out of 20 tests although accuracy decreased when testing the next day. 
+https://towardsdatascience.com/using-machine-learning-to-categorise-eeg-signals-from-the-brain-to-words-728aba93b2b3
+
+
+[2] “Machine-Learning-Based Diagnostics of EEG Pathology”
+Lukas A.W. Gemein, Robin T. Schirrmeister, Patryk Chrabąszcz, Daniel Wilson, Joschka Boedecker, Andreas Schulze-Bonhage, FrankHutter, TonioBall	 15 October 2020
+GemeinEtAl2020
+
+This paper compares feature-based approaches that have handcrafted features and end-to-end approaches which have learned features. The dataset used was Temple University Hospital Abnormal EEG Corpus which consists of 2993 EEG recordings with each recording being at least 15 minutes long. The feature-based approach used random forest, support vector machine, Riemannian geometry, and auto-sklearn classifier. The end-to-end approach used three types of convolutional neural networks, Braindecode, and a TCN architecture. In preprocessing, 21 electrode positions were chosen following the 10-20 placement. The first 60 seconds of each recording was discarded due to a high number of artifacts present, and a maximum of 20 minutes per recording was used. EEG recordings were adjusted to 100 Hz and ± 800 μV. It was found that both approaches reach accuracies from 81% to 86%.
+https://www.sciencedirect.com/science/article/pii/S1053811920305073
+
+
+[3] “Deep Learning-based Electroencephalography Analysis: a systematic review”
+Yannick Roy, Hubert Banville, Isabela Albuquerque, Alexandre Gramfort, Tiago H Falk, and Jocelyn Faubert 	April 14, 2019
+RoyEtAl2019
+
+This paper compares and analyzes 154 EEG related papers based on the data, preprocessing, deep learning methods, results, and reproducibility. It was found that CNNs were used in 40% of the papers while RNNs were used in 13%. The two most commonly used devices are ActiveTwo and EPOC. Half of the studies used between 8 and 62 electrodes. Most recording sampling rates were between 100-1000 Hz although half of the studies used sampling rates below 250 Hz. Although most studies used some form of preprocessing, models that used raw data performed about 4% better than those which used preprocessed data. 
+https://iopscience.iop.org/article/10.1088/1741-2552/ab260c
+
+
+[4] “Automatic Analysis of EEG Using Big Data and Hybrid Deep Learning”
+Meysam Golmohammadi, Amir Hossein Harati Nejad Torbati, Silvia Lopez de Diego, Iyad Obeid and Joseph Picone* 		March 12, 2019
+GolmohammadiEtAl2019
+
+This paper used the Temple University Hospital EEG Corpus. The goal of the study was to analyze EEG signals in order to classify wave patterns and background activity. The three wave patterns classified were sharp waves, periodic lateralized epileptiform discharges, and generalized periodic epileptiform discharges. The three patterns used to model background noise were eye movement, artifacts, and background. The study used a frequency of 250 Hz and 22 channels corresponding to the 10-20 configuration. Linear frequency cepstral coefficients were used for feature extraction. The study resulted in above 90% sensitivity and below 5% specificity. 
+Methods include Hidden Markov Models (HMM), stacked denoising Autoencoder (SdA), and finite state machine based on a statistical language model.
+Used open source toolkit, Theano.
+https://www.frontiersin.org/articles/10.3389/fnhum.2019.00076/full
+
+
+[5] “How Deep Learning is Changing Machine Learning AI in EEG Data Processing”
+The Bitbrain Team 	April 23, 2020
+Bitbrain2020
+
+This article compares EEG data processing methods before and after deep learning. The “pre-deep learning” process consists of preprocessing raw EEG data to remove artifacts and noise in the data. Then, feature extraction is used to extract useful information from the EEG data. The process of feature extraction can be done using a variety of methods such as hand crafting features or linear/non-linear spatial filtering. After that, the EEG is decoded, often by using a type of classification algorithm. Deep learning requires more data than traditional machine learning. CNN and RNN architectures are the most commonly used. In addition, little to no preprocessing is needed with deep learning. Deep Learning has an accuracy improvement of about 5.4% over traditional machine learning methods.
+https://www.bitbrain.com/blog/ai-eeg-data-processing
+
+
+[6] “A comparative Analysis of Machine Learning Methods for Emotion Recognition Using EEG and Peripheral Physiological Signals”
+Vikrant Doma & Matin Pirouz 	March 11, 2020
+DomaPirouz2020
+
+This study used the DEEPdataset which contains information relating to emotion analysis. The dataset uses 48 channels recorded at 512 Hz. In preprocessing, recordings were split into 4 parts each 15 minutes long. The study used principal component analysis to minimize the number of training features and find the channels with the best results. It compares Naive Bayes, Logistic Regression, K-nearest neighbor, support vector machines, and decision trees. K-nearest neighbor had the best results with a 74.25% accuracy. 
+https://journalofbigdata.springeropen.com/articles/10.1186/s40537-020-00289-7
+
+
+[7] “Analyzing EEG Signals with Machine Learning for Diagnosing Alzheimer's Disease”
+V. Podgorelec 	March 9, 2012
+Podgorelec2012
+This study used EEG recordings consisting of 208 patients with each recording lasting 120 seconds with a frequency of up to 100 Hz. These patients were experiencing symptoms possibly related to brain disorders. 88% of patients were diagnosed with Alzeimer’s Disease and 12% were diagnosed with other vascular issues. A combination of the 4th and 16th EEG channels were used as it was found they produced the best results. The article compared the results of gentrees, J48, Naive-Bayes, SimpleCart, NBTree, IBk, SMO, OneR. Gentrees gave the best results with a sensitivity of 88.89%, a specificity of 71.43%, and an accuracy of 86.05%. ftp://ftp.cs.uoregon.edu/pub/malony/EGI/2627-7618-1-PB.pdf
+
+
+[8] “Decoding imagined, heard, and spoken speech: classification and regression of EEG using a 14-channel dry-contact mobile headset”
+Jonathan Clayton, Scott Wellington, Cassia Valentini-Botinhao, Oliver Watts   October 29, 2020
+ClaytonEtAl2020
+In this paper, researchers use a 14 channel mobile EEG device to attempt to decode “heard, imagined, and articulated English phones” from EEG data. The dataset used is the FEIS (Fourteen-channel EEG for Imagined Speech) dataset which consists of sixteen English phonemes and 21 participants. The phonemes were recorded using the participants’ voices at 44.1 kHz. The mobile headset used was the Emotiv EPOC+. The “Emotiv EPOC+ performs notch-filtering at 50 HZ and 60Hz to remove powerline noise”. There was no signal preprocessing to “remove physiological artifacts”.
+The models used were subject-dependent meaning that the test and training data are from the same subject. 80% of data was used for training, 10% for testing, and 10% for validation. As an exception, the support vector model used “80/20 training/test split with 5-fold cross validation”. 
+For classification, support vector machines (SVMs) and Convolutional Neural Networks (CNNs) were used. For regression, Dense Network + DAE was used. 
+This paper concludes that the SVM model “consistently achieved above-chance accuracy while CNN did not”. SVM achieved 64% accuracy in Hearing, 69% accuracy in Thinking, and 63% accuracy in Speaking.
+The paper also concludes that “commercial-grade devices can be used as speech-decoding BCI’s with minimal signal processing” because the achieved performance is on a par with studies that use research-grade devices. 
+https://indico2.conference4me.psnc.pl/event/35/contributions/3906/attachments/1000/1041/Thu-3-7-12.pdf
+
+
+[9] “NeuroPhone: Brain-Mobile Phone Interface Using a Wireless EEG Headset”
+Andrew T. Campbell, Tanzeem Choudhury, Shaohan Hu, Hong Lu,Matthew K. Mukerjee∗, Mashfiqui Rabbi, and Rajeev D. S. Raizada		August 30, 2010
+CampbellEtAl2010
+We present the design, implementation and evaluation of the NeuroPhonesystem, which al-lows neural signals to drive mobile phone applications on theiPhone using cheap off-the-shelf wireless electroencephalo-graphy (EEG) headsets. We demonstrate a brain-controlledaddress book dialing app, which works on similar princi-ples to P300-speller brain-computer interfaces: the phoneflashes a sequence of photos of contacts from the addressbook and a P300 brain potential is elicited when the flashedphoto matches the person whom the user wishes to dial.EEG signals from the headset are transmitted wirelessly toan iPhone, which natively runs a lightweight classifier to dis-criminate P300 signals from noise
+They used a wireless EmotivEPOC EEG headset and an iphone. 
+Methods: Multivariate equal-prior Bayesian classifier
+https://pac.cs.cornell.edu/pubs/neurophone.pdf 
+
+[10] Mental tasks classification using EEG signal, discrete wavelet transform and neural network Discovery
+Padmanabh Lanke, Rajveer K Shastri, Shashank Biradara		November 6, 2015 LankeEtAl2015
+Found in paper [3] as reference [139] under mental tasks
+This paper classifies five mental tasks using Discrete wavelet transform (DWT) and an artificial neural network (ANN) technique together. The five mental tasks are Baseline (subjects asked to relax), Multiplication (subjects asked to multiply two numbers in their head), Rotation (subjects were asked to imagine a cube is rotating), Counting (subjects asked to count mentally), and Letter composition (subjects asked to compose letter mentally).
+DWT was used to extract features from the EEG signals. 
+The dataset used is by Keirn and Aunon and can be found at:  http://www.cs.colostate.edu/anderson
+Multilayer Perceptron Neural Networks-MLPNN(trained using NNtool in Matlab) and PNN (probabilistic neural network?) were used. 
+MLPNN obtained 92% accuracy and PNN obtained 100% accuracy. 
+https://www.researchgate.net/publication/313839554_Mental_Tasks_Classification_using_EEG_signal_Discrete_Wavelet_Transform_and_Neural_Network
+
+
+[11] “A hierarchical LSTM model with attention for modeling EEG non-stationarity for human decision prediction”
+Md Musaddaqul Hasib; Tapsya Nayak; Yufei Huang		
+Found in paper [3] as reference [77] under mental tasks 
+(Paper not found)
+Long Short-Term Memory (LSTM)
+Hierarchical Long Short-Term Memory (H-LSTM)
+
+The goal of this research was to predict the human decision from continuous EEG signals. An application was designed to guard a restricted area, a decision of allow or deny is made based on the physical appearance and identification card. There were 18 subjects. 
+
+Results indicate that H-LSTM model outperforms an LSTM model by 12.4% and a shallow Support Vector Machine model by 17.4% Our results suggest that the H-LSTM model can be utilized effectively to predict human decision or other similar applications.
+https://ieeexplore.ieee.org/document/8333380
+
+
+[12] “Deep RNN learning for EEG based functional brain state inference”
+Suprava Patnaik, Lalita Moharkar, Amogh Chaudhari		December 2017
+Found in paper [3] as reference [146] under mental tasks
+(paper not found)
+This paper uses deep learning for task identification using EEG. It uses extraction of EEG sub-band features by using wavelet transform followed through classification by means of recurrent neural network (RNN) and deep learning.
+https://www.researchgate.net/publication/323863463_Deep_RNN_learning_for_EEG_based_functional_brain_state_inference
+
+
+[13] “Vowel classification from imagined speech using sub-band EEG frequencies and deep belief networks”
+Anandha Sree Rajesh, Kavitha Anadan 	
+Found in paper [3] as refence [180] under speech decoding
+(paper not found)
+This paper aims to classify the vowels `a', `e', `i', `o', `u' from EEG signals, that have been derived while imagining the vowels. There are 5 subjects. 
+The signals have been segmented under various sub-band frequencies and subjected to Db4 Discrete Wavelet Transform.
+The method for training and testing was using Deep Belief Networks for classifying the imagined vowels.
+https://www.researchgate.net/publication/320751081_Vowel_classification_from_imagined_speech_using_sub-band_EEG_frequencies_and_deep_belief_networks
+
+
+[14] “Neural Networks based EEG-Speech Models”
+Pengfei Sun and Jun Qin 	December 16, 2016
+SunQin2016
+Found in paper [3] as reference [185] under speech decoding
+In this paper, three network structures are developed to map imagined EEG signals to phonemes.
+The proposed neural network-based EEG-speech (NES) models incorporate a language model-based EEG feature extraction layer, an acoustic feature mapping layer, and a restricted Boltzmann machine (RBM) based on the feature learning layer. 
+Results show that all three proposed NES models outperform the baseline support vector machine (SVM) method on EEG- speech classification.
+https://arxiv.org/abs/1612.05369
+
+
+[15] “Classification of auditory stimuli from EEG signals with a regulated recurrent neural network reservoir”
+Marc-Antoine Moinnereau, Thomas Brienne, Simon Brodeur, Jean Rouat, Kevin Whittingstall, Eric Plourde		April 27, 2018
+MoinnereauEtAl2018
+Found in paper [3] as reference [125] under speech decoding 
+This paper aims to classify heard speech from EEGs. 
+Two methods are compared: a regulated recurrent neural network (RNN) reservoir and a deep neural network. 
+8 subjects were presented randomly with 3 different auditory stimuli (English vowels a, i and u). A classification rate of 83.2% was obtained with the RNN when considering all 64 electrodes. A rate of 81.7% was achieved with only 10 electrodes. 
+https://arxiv.org/abs/1804.10322
+
+
+[16] “A Comparison of Conventional and Tri-Polar EEG Electrodes for Decoding Real and Imaginary Finger Movements from One Hand”
+Saleh I. Alzahrani and Charles W. Anderson		2021
+International Journal of Neural Systems, 2021, https://doi.org/10.1142/S0129065721500362
+(Paper not found)
+The device used to get EEG data was the Tri-polar concentric ring electrodes (TCREs).
+Method used was surface Laplacian.
+https://www.worldscientific.com/doi/epdf/10.1142/S0129065721500362
+
+
+[17] “Brain wave recognition of words”
+PATRICK SUPPES, ZHONG-LIN LU, and BING HAN		October 1997
+SuppesEtAl1997
+Found in paper [14] as reference [8]
+
+EEG and MEG signals of seven subjects under three experimental conditions were recorded for the purpose of recognizing which one of seven words was processed. 
+The analysis consisted of averaging over trials to create prototypes and test samples, to both of which Fourier transforms were applied, followed by filtering and an inverse transformation to the time domain.						
+Fourier transforms were applied, followed by filtering and an inverse transformation to the time domain. The filters used were optimal predictive filters, selected for each subject and condition 	
+https://www.pnas.org/content/pnas/94/26/14965.full.pdf
+
+
+[18] “Single-trial classification of vowel speech imagery using common spatial patterns”
+Charles S. DaSalla, Hiroyuki Kambara, Makoto Sato, Yasuharu Koike		May 2009
+DaSallaEtAl2009
+Found in paper [14] as reference [9]
+EEG was recorded in three healthy subjects for three tasks, imaginary speech of the English vowels /a/ and /u/, and a no action state as control. 
+Trial averages revealed readiness potentials at 200 ms after stimulus and speech related potentials peaking after 350 ms.
+Classification accuracies ranged from 68% to 78%.
+Methods include Spatial filters optimized for task discrimination were designed using the common spatial patterns method, and the resultant feature vectors were classified using a nonlinear support vector machine. 
+https://www.sciencedirect.com/science/article/pii/S0893608009000999
+
+
+[19] “Toward EEG Sensing of Imagined Speech”
+Michael D’Zmura, Siyi Deng, Tom Lappas, Samuel Thorpe, Ramesh Srinivasan 	2009
+D’ZmuraEtAl2009
+Found in paper [14] as reference [10]
+Four subjects participated in an experiment with six conditions determined factorially through combination of two syllables (“ba” and “ku”) and three rhythms. 		
+20 trials for each of the six conditions and six such sessions for a total of 120 trials per condition.
+The method used was Matched-Filter Classification Using Envelopes.
+https://link.springer.com/content/pdf/10.1007%2F978-3-642-02574-7_5.pdf
+
+
+[20] “An auditory brain–computer interface evoked by natural speech”
+M A Lopez-Gordo, E Fernandez, S Romero, F Pelayo, Alberto Prieto		June 2012
+Lopez-GordoEtAl2012
+Found in paper [14] as reference [11]
+The study used 12 healthy subjects which were recommended to close their eyes throughout the experiment. A single channel was used with an active electrode placed on the vertex (Cz) and referenced to the mean value of the mastoids.				
+Two conditions were tested. Each stimulus of condition 1 consisted of the repetitive spelling of a word of five (left stream) and six (right stream) letters that were randomly picked from a dictionary. The letters were previously sampled (16 bits per sample at 44 100 Hz and 200 ms length) from a male voice that read the Spanish alphabet. 					
+The stimuli delivered to the left and right ears were composed of five and six letters and repeated six and five times, respectively. Thus, a total number of 30 stimuli (6 × 5 or 5 × 6) were delivered to each ear in such a way that the same letter in one stream was never listened to at the same position relative to the other stream. After each spelling, the subject was to report the word that was spelled. 
+In condition 2, two different speeches were delivered simultaneously, one per ear. The envelope of each speech was previously multiplied by a rectangular waveform with a period of 200 ms and a 50% duty cycle. The sentences were previously recorded with the same characteristics as for condition 1. After each sentence (question), the subject was to answer the question. 
+The discrete Fourier transform (DFT) was computed on each trial. 
+The minimum Euclidean distance was used which is a simple approach within a Bayesian framework.								
+fully auditory EEG-BCI based on a dichotic listening paradigm using human voice for stimulation was used.
+https://www.researchgate.net/publication/225060498_An_auditory_brain-computer_interface_evoked_by_natural_speech
+
+
+[21] “EEG-based Speech Recognition - Impact of Temporal Effects”
+Anne Porbadnigk, Marek Wester, Jan-P. Calliess, Tanja Schultz	2009
+PorbadnigkEtAl2009
+Found in paper [14] as reference [12]
+In this paper, we investigate the use of electroencephalograhic signals for the purpose of recognizing unspoken speech. The term unspoken speech refers to the process in which a subject imagines speaking a given word without moving any articulatory muscle or producing any audible sound.
+In JRTk, every word is modeled by a left-to-right Hidden Markov Model (HMM). The standard HMM used for training had five states and one Gaussian mixture per state. We also performed experiments with different numbers of HMM states (3,4,5,6,7) and Gaussians per state (4,8,16,32,64)
+https://www.semanticscholar.org/paper/EEG-based-Speech-Recognition-Impact-of-Temporal-Porbadnigk-Wester/fc219252fa7c2f7e95e1e5564390108bd0ff20b8
+
+
+[22] “Pattern analysis of EEG responses to speech and voice: Influence of feature grouping”
+Lars Hausfeld, Federico De Martino, Milene Bonte, Elia Formisano		November 2011
+HausfeldEtAl2011
+Found in paper [14] as reference [13]
+We combined these different types of analyses with a Gaussian Naïve Bayes classifier and analyzed a multi-subject EEG data set from a study aimed at understanding the task dependence of the cortical mechanisms for encoding speaker's identity and speech content (vowels) from short speech utterances (Bonte, Valente, & Formisano, 2009).
+
+This paper considers six types of pattern analyses deriving from the combination of three types of feature selection in the temporal domain with two approaches to handle the channel dimension.
+Gaussian Naïve Bayes classifier was used. 
+https://www.researchgate.net/publication/51865246_Pattern_analysis_of_EEG_responses_to_speech_and_voice_Influence_of_feature_grouping
+
+
+[23] “Analysis and classification of speech imagery EEG for BCI”
+Li Wang, Xiong Zhang, Xuefei Zhong, Yu Zhang 	November 2013
+Found in paper [14] as reference [14]
+(Paper not found)
+In order to complement existing motor-based control paradigms, speech imagery was proposed.
+Feature vectors of EEG signal were extracted by common spatial patterns (CSP).
+Feature vectors were classified by support vector machine (SVM).
+Eight Chinese subjects were required to read two Chinese characters in mind in this experiment.
+https://www.sciencedirect.com/science/article/abs/pii/S1746809413001122
+
+
+[24] “Decoding of Covert Vowel Articulation Using Electroencephalography Cortical Currents”
+Natsue Yoshimura, Atsushi Nishimoto, Abdelkader Nasreddine Belkacem, Duk Shin, Hiroyuki Kambara, Takashi Hanakawa, and Yasuharu Koike 		May 2016
+YoshimuraEtAl2016
+Found in paper [14] as reference [17]
+EEG cortical currents were estimated with a variational Bayesian method that uses functional magnetic resonance imaging (fMRI) data as a hierarchical prior. 
+EEG and fMRI data were recorded from ten healthy participants during covert articulation of Japanese vowels /a/ and /i/, as well as during a no-imagery control task. Applying a sparse logistic regression (SLR) method to classify the three tasks, mean classification accuracy using EEG cortical currents was significantly higher than that using EEG sensor signals and was also comparable to accuracies in previous studies using electrocorticography.
+https://www.frontiersin.org/articles/10.3389/fnins.2016.00175/full
+
+
+[25] “Classifying Phonological Categories in Imagined and Articulated Speech”
+Shunan Zhao and Frank Rudzicz		2015
+ZhaoRudzicz2015							
+This paper includes a new dataset that combines 3 modalities (EEG, facial, and audio) during imagined and vocalized phonemic and single-word prompts. 
+EEG data is pre-processed, features for all 3 modalities are computed, and binary classification of phonological categories are performed using a combination of these modalities. 
+There were 12 total participants that made up the EEG data although the data from 4 of the participants was discarded. They used a 64-channel Neuroscan Quick-cap and the 10-20 placement system.			
+
+To collect data, participants first had a 5 second rest state where they were to relax their minds. The stimulus state began when the word/syllable appeared on the screen. 7 phonemic/syllabic prompts (/iy/, /uw/, /piy/, /tiy/, /diy/, /m/, /n/) and 4 words derived from Kent’s list of phonetically-similar pairs (i.e., pat, pot, knew, and gnaw) where shown on a screen. After that, there was a 5 second imagined speech state. Lastly, there was a speaking state where the participant spoke the word/syllable. 
+There were 132 trials. 
+Data was preprocessed with EEGLAB. 
+The two methods used were a deep-belief network (DBN) and a support vector machine (SVM). 
+http://www.cs.toronto.edu/~complingweb/data/karaOne/ZhaoRudzicz15.pdf
+
+
+[26] “Deep learning with convolutional neural networks for EEG decoding and visualization”					
+Robin Tibor Schirrmeister, Jost Tobias Springenberg, Lukas Dominique Josef Fiederer, Martin Glasstetter, Katharina Eggensperger, Michael Tangermann, Frank Hutter, Wolfram Burgard,2,7 and Tonio Ball			2017 
+SchirrmeisterEtAl2017
+This study uses deep ConvNets with a range of different architectures, designed for decoding imagined or executed tasks from raw EEG. Results are compared to that of the filter bank common spatial patterns (FBCSP) algorithm. 
+Braindecode is used. 
+https://onlinelibrary.wiley.com/doi/10.1002/hbm.23730
