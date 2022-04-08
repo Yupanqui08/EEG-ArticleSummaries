@@ -1,0 +1,32 @@
+EEG Repositories
+
+[1] Classifying Syllables in Imagined Speech using EEG
+Barak Oshri (boshri), Nishith Khandwala (nishith), Manu Chopra (mchopra)
+OshriEtAl
+Participants imagine speaking the syllables “ba”/ “ku” and “im”/ “si” in response to a tone played. A high tone and a low tone each correspond to one of the two syllables in each pair. There are 200 samples of EEG data for each syllable. Mean Feature Extractor and Discrete Wavelet Transform were used to extract features. K-nearest neighbors, Naïve Bayes, and Neural Networks were used as classifying models although Neural Networks gave the best results. Code is also provided in .mat (MATLAB) and .m (text file where you can put MATLAB commands) format.
+https://github.com/manuchopra/imagined-speech
+Website: http://www.manuchopra.in
+Paper: http://www.manuchopra.in/paper1.pdf
+
+[2] Fourteen-channel EEG with Imagined Speech (FEIS) dataset
+Scott Wellington; Jonathan Clayton	November 26, 2019
+WellingtonClayton2019
+This dataset consists of 14 channel EEG data. The dataset includes EEG recordings of “21 participants listening to, imagining speaking, and then actually speaking 16 English phonemes”. The dataset also contains 2 participants listening to, imagining, and speaking 16 Chinese syllables. EEG data is provided in .csv format. Python scripts, recorded audio, and flashcards are also provided. Code is provided in .py format; images of the phonemes are in .png format; and EEG data is in .wav and .csv format. WAV stores audio bitstreams, and it is the main format for uncompressed audio although it can also contain compressed audio. 
+https://zenodo.org/record/3554128#.YHjbty2cbyU
+
+Paper: Used CNN and SVM
+
+[3] *Inner Speech		
+Nicolás Nieto, Victoria Peterson, Hugo Leonardo Rufiner, Juan Kamienkoski, and Ruben Spies April 20, 2021
+NietoEtAl2021
+This dataset consists of data from 10 participants using inner speech, pronounced speech, and visualized condition. The terms used were the Spanish words “arriba”(up), “abajo”(down), “derecha”(right), and “izquierda”(left). A total of 5640 trials were recorded. EEG data is presented in .bdf format. BDF stands for Bitmap Distribution Format. These files are considered font files and are in the form of text files that are both human and computer readable.  
+https://openneuro.org/datasets/ds003626/versions/2.0.0
+
+
+[4] Open access database of EEG signals recorded during imagined speech (Paid):
+Germán A. Pressel Coretto; Iván E. Gareis; H. Leonardo Rufiner 	January 26, 2017
+CorettoEtAl2017
+This dataset contains data on 15 participants imagining the pronunciation of Spanish vowels and words. Vowels include “a”, “e”, “i”, “o”, “u” and the Spanish words include “up”, “down”, “left”, “right”, “backward”, and “forward”. Each word/vowel was repeated 50 times. A six-channel system was used at 1024Hz. Accuracy rate was above chance for most but not all participants. 
+https://spie.org/Publications/Proceedings/Paper/10.1117/12.2255697
+Found in:
+Classification of Vowels from Imagined Speech with ... - MDPIhttps://www.mdpi.com › pdf
